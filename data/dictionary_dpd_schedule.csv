@@ -1,0 +1,15 @@
+schedule,schedule_category
+CONTROLLED DRUGS (CDSA I),include
+CONTROLLED DRUGS (CDSA III),include
+CONTROLLED DRUGS (CDSA IV),include
+COVID-19 - IO - Authorization,include
+Ethical,include
+Homeopathic,non-drug
+NARCOTICS (CDSA I),include
+NARCOTICS (CDSA II),include
+NON-PRESCRIPTION DRUGS,otc
+Prescription,include
+Prescription Recommended,include
+Schedule C,non-drug
+Schedule D,include
+TARGETED SUBSTANCES (CDSA IV),include

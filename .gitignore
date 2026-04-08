@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+analysis/
+data/cihi/
+data/dpd/
+data/input_din_list.csv
+data/dictionary_who_atc.csv
+log/
+output/
