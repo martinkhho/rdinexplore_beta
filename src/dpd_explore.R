@@ -3,15 +3,15 @@
 # ------------------------------------------------------------------------------
 
 # Loads DPD with caching option
-dpd_load_cache <- function(download_dpd = FALSE) {
-  dpd_dir <- file.path(DATA_DIR, "dpd")
-  dpd_cache_rds <- file.path(DATA_DIR, "dpd_cached.rds")
+dpd_load_cache <- function(download_dpd = FALSE, data_dir = here::here("./data/")) {
+  dpd_dir <- file.path(data_dir, "dpd")
+  dpd_cache_rds <- file.path(data_dir, "dpd_cached.rds")
   if (!download_dpd && !file.exists(dpd_cache_rds)) {
     stop("No existing DPD found, perhaps because you are using this tool for the first time. Select 'Download latest DPD'.")
   }
   dpd <- if (download_dpd) {
     dpd_loaded <- dpd_load(dpd_dir, download = TRUE)
-    dir.create(DATA_DIR, recursive = TRUE, showWarnings = FALSE)
+    dir.create(data_dir, recursive = TRUE, showWarnings = FALSE)
     saveRDS(dpd_loaded, dpd_cache_rds)
     dpd_loaded
   } else {

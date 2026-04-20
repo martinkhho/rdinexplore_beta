@@ -13,8 +13,6 @@ source(here("./src/read_files.R"))
 source(here("./src/dpd_load.R"))
 source(here("./src/dpd_explore.R"))
 
-DATA_DIR <- here("./data/")
-
 
 
 # User Interface ---------------------------------------------------------------
@@ -413,7 +411,7 @@ server <- function(input, output, session) {
         download_dpd <- identical(dpd_choice(), "download")
         keep_f_cols <- identical(keep_f_choice(), "yes")
 
-        dpd <- dpd_load_cache(download_dpd = download_dpd)
+        dpd <- dpd_load_cache(download_dpd = download_dpd, data_dir = app_data_dir)
 
         incProgress(0.2, detail = "Applying options")
 
